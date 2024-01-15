@@ -10,6 +10,7 @@ def padronizar_codigos(lista_codigo, padrao ='m'):
             
         elif padrao == "M":
             item=item.upper()
+        
         else:
             print("Digite o codigo correto M ou m")
         
