@@ -22,8 +22,6 @@ data_hora_TK=data_hora_atual.astimezone(fuso_horario_TK)
 print (data_hora_SP)
 print (data_hora_NY)
 print (data_hora_TK)
-
-
     
 print(f"O escritorio de São paulo está {verifica_horario(data_hora_SP)}")  
 print(f"O escritorio de New York está {verifica_horario(data_hora_NY)}")  
