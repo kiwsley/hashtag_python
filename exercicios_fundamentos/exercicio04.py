@@ -32,5 +32,4 @@ for redes_sociais , url  in redes_sociais.items():
         image_factory=StyledPilImage,
         embeded_image_path="logo.png"
     )
-
     imagem.save("logo"+redes_sociais+".png")
