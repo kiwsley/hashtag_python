@@ -85,21 +85,24 @@ class CartaoCredito:
         self.validade='{}/{}'.format(CartaoCredito._dataHora().month,CartaoCredito._dataHora().year+4)
         self.cod='{}{}{}'.format(randint(0,9),randint(0,9),randint(0,9))
         self.limite=None
+        self._senha='1234'
         self.conta_corrente=conta_corrente
         conta_corrente.cartoes.append(self)
+    
+    @property #get
+    def senha(self):
+        return self._senha
+    
+    @senha.setter #set
+    def senha(self,valor):
+
+        if len(valor)==4 and valor.isnumeric():
+            self._senha = valor
+        else:
+            print("Nova senha inválida")
+         
         
 
 
-contaKiw=ContaCorrente("kiw","12345",333,444)
-
-cartaokiw =CartaoCredito('kiwsley',contaKiw)
-
-print(cartaokiw.titular)
-
-print(cartaokiw.conta_corrente.numConta)
-
-print(cartaokiw.numero)
-print(cartaokiw.cod)
 
 
-print(cartaokiw.validade)
